@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>@stacksagar</title>
+		<link rel="stylesheet" href="src/css/quickstar.css" />
+		<link rel="shortcut icon" href="src/images/stackLogo.png" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Write html code -->
+		<section id="recipe">
+			<div class="app-container">
+				<header>
+					<h2 id="refresh_button"><i class="fas fa-sync-alt"></i></h2>
+					<h4 id="allRecipes">All Recipes</h4>
+					<form class="unShow" id="search_form">
+						<input type="text" placeholder="Search" />
+						<button><i class="fas fa-search"></i></button>
+					</form>
+					<h2 id="search_button">
+						<i class="fas fa-search"></i>
+					</h2>
+				</header>
+				<div class="recipe_list">
+					<div id="cake">
+						<img src="src/images/cake.jpg" alt="" />
+						<h5>Cake</h5>
+					</div>
+					<div id="chicken">
+						<img src="src/images/chicken.jpg" alt="" />
+						<h5>Chicken</h5>
+					</div>
+					<div id="apples">
+						<img src="src/images/apple.jpg" alt="" />
+						<h5>Apples</h5>
+					</div>
+					<div id="chocolate">
+						<img src="src/images/chocolate.jpg" alt="" />
+						<h5>chocolate</h5>
+					</div>
+				</div>
+				<div class="personalize">
+					<div class="personalize_top">
+						<div>
+							<h1>
+								<strong> 💚 Favorite</strong>
+							</h1>
+						</div>
+						<div>
+							<h1 class="p_remove"><i class="fas fa-times"></i></h1>
+						</div>
+					</div>
+					<div class="personalize_bottom">
+						<button id="showFav">SHOW FAVORITE</button>
+					</div>
+				</div>
+
+				<div id="AllFavRecipes"></div>
+				<div style="padding: 0px" id="setAllRecipes"></div>
+
+				<div class="searchLoading"><img src="src/images/loading.gif" alt="" /></div>
+				<div class="defaultLoading"><img src="src/images/loading2.gif" alt="" /></div>
+			</div>
+		</section>
+		<section class="loading">
+			<div class="loading-container">
+				<img src="src/images/loading.gif" alt="" />
+			</div>
+		</section>
+		<section class="popup">
+			<div class="popup-container"></div>
+		</section>
+		<!-- Write html code -->
+
+		<footer id="footer" class="footer">
+			<h1>Follow | Connect <i class="fas fa-plus" aria-hidden="true"></i></h1>
+			<div class="footer_social">
+				<a target="_blank" href="https://github.com/stacksagar"><i class="fab fa-github"></i></a>
+				<a target="_blank" href="https://twitter.com/stacksagar"><i class="fab fa-twitter"></i></a>
+				<a target="_blank" href="https://linkedin.com/in/stacksagar/"><i class="fab fa-linkedin"></i></a>
+				<a target="_blank" href="https://freecodecamp.org/stacksagar"><i class="fab fa-free-code-camp"></i></a>
+				<a target="_blank" href="https://facebook.com/stacksagar"><i class="fab fa-facebook"></i></a>
+				<a target="_blank" href="https://discord.gg/KkqhEwdsz3"><i class="fab fa-discord"></i></a>
+				<a target="_blank" href="mailto:contact.jrsagar@gmail.com"><i class="fas fa-envelope"></i></a>
+				<a target="_blank" href="https://wa.me/+8801797177287"><i class="fab fa-whatsapp"></i></a>
+				<a target="_blank" href="skype:live:.cid.33c8b81772488296"><i class="fab fa-skype"></i></a>
+				<a target="_blank" href="https://m.me/stacksagar"><i class="fab fa-facebook-messenger"></i></a>
+			</div>
+		</footer>
+
+		<div class="fixedName quickstar"></div>
+		<script src="src/js/all.min.js"></script>
+		<script src="src/js/code.js"></script>
+		<script src="src/js/autoWrite.min.js"></script>
+		<script src="programming.js"></script>
+	</body>
+</html>

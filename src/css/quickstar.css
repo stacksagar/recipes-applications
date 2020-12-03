@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
+body {
+ background: #151515;
+}
+html {
+ scroll-behavior: smooth;
+}
+* {
+ font-family: Consolas, Prompt, sans-serif !important; 
+ margin: 0px;
+ padding: 0px; 
+ box-sizing: border-box;
+}
+
+.fixedName {
+ position: fixed;
+ right: 10px;
+ bottom: 10px;
+ background: #111111;
+ padding: 7px 14px;
+ border: 3px dotted #222222;
+ border-radius: 4px;
+ width: 181px; 
+}
+
+.fixedName a {
+ display: inline-block;
+ text-decoration: none;
+ font-size: 1.2rem;
+ position: relative;
+ color: #ddd;
+}
+ 
+.unsetUsername:after {
+ opacity: 0 !important;
+}
+
+.fixedName a .fa-github {
+ margin-right: 1.5px;
+ margin-bottom: -1px;
+} 
+
+.footer {
+ width: 100%;
+ padding:100px 20px;
+ background: #ffffff;
+ text-align: center;
+}
+
+.footer_social {
+ margin:30px auto;
+ margin-bottom: 0px !important;
+ width: 500px; 
+ padding: 30px 10px;
+ background: #f5f5f5;
+ display: grid;
+ align-content: center;
+ justify-content: center;
+ grid-template-columns: repeat(auto-fill, 45px);
+ grid-template-rows: repeat(2,45px);
+ grid-gap:50px;
+ border-radius:10px;
+ box-shadow:0px 0px 15px 0px #ddd;
+}
+
+.footer_social a {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color:blueviolet !important;
+ border-radius:50%;
+ background: #fff; 
+ box-shadow:0px 0px 20px 0px #eee;
+ font-size:1.2rem; 
+} 
+.footer_social a:hover { 
+ background:#dddddd;
+ box-shadow: 0px 0px 20px 10px #ddd;
+}
+/* Responsive Design */
+@media (max-width:768px) {
+ #recipe,.app-container {
+  padding:0px !important;
+ }
+}
+@media (max-width:600px) {
+ .navBars {
+  display: unset !important;
+ }
+
+ .header nav {
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 95%;
+  right: 0px;
+  background: #242424;
+  padding: 20px;
+  transform: scaleY(0);
+  transform-origin: top;
+  border-radius: 0px 0px 0px 20px;
+ }
+
+ .header nav a {
+  margin: 10px 0px;
+ }
+
+ .navUnset {
+  transform: unset !important;
+ }
+
+ .footer h1 {
+  font-size:1.4rem;
+ }
+ .footer_social {
+  width:100%;
+  grid-template-rows: repeat(4,45px);
+ }
+
+}

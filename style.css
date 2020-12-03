@@ -1,0 +1,400 @@
+#recipe{
+	width: 100%;
+	min-height: 100vh;
+	max-height: auto;
+	background: #faf7fb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0px;
+}
+
+.app-container {
+	width: 500px;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-radius: 10px;
+	background: #ffffff;
+	padding: 5px 0px;
+	padding-top: 0px;
+	position: relative;
+}
+
+.searchLoading,
+.defaultLoading {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: #000000c2;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.defaultLoading {
+	display: flex;
+}
+.searchLoading img,
+.defaultLoading img {
+	width: 30%;
+}
+
+.app-container header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	position: relative;
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	background: #ffffff;
+	z-index: 99;
+}
+
+.app-container header h2 {
+	color: #333;
+}
+
+#allRecipes {
+	padding: 6.5px 0px;
+}
+
+#search_form {
+	background: #eee;
+	padding: 3px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#search_form input {
+	padding: 5px;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+#search_form button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	background: transparent;
+}
+
+#search_button {
+	cursor: pointer;
+}
+
+.app-container header h4 {
+	color: rgb(198, 134, 15);
+}
+
+.recipe_list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: #eee;
+	padding: 10px 0px;
+	font-size: 0.8rem;
+	position: sticky;
+	top: 50px;
+	left: 0px;
+	z-index: 5;
+	transition: all 0.5s;
+}
+
+.recipe_list div {
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.recipe_list div:hover {
+	transform: scale(1.1);
+}
+
+.recipe_list img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.personalize {
+	background: linear-gradient(to right, #a580ff, #6e6190);
+	text-align: center;
+	width: 92%;
+	margin: 15px auto;
+	color: #eee;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0px 0px 10px 0px #ddd; 
+}
+
+.personalize_top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: justify !important;
+}
+
+.personalize_top .p_remove {
+	cursor: pointer;
+}
+
+.personalize_bottom {
+	margin-top: 15px;
+}
+
+.personalize_bottom button {
+	padding: 6px 12px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+ cursor: pointer;
+ background:linear-gradient(to right, #e0aae0, #f5a5bd);
+ box-shadow:0px 0px 10px 0px #555;
+ color:#111;
+}
+
+#AllFavRecipes {
+	display: none;
+}
+
+.single_recipe {
+	width: 92%;
+	margin: 20px auto;
+	background: #eee;
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px 0px #e7e3e3;
+	position: relative;
+}
+#AllFavRecipes .single_recipe::after {
+	content: '😍Your Favorite ';
+	position: absolute;
+	top:30px;
+	left:0px; 
+	padding:10px;
+	background:blueviolet;
+	border-radius:0px 10px 10px 0px;
+	color:#fff;
+}
+
+.heartView {
+	position: absolute;
+	right: 0px;
+	top: 180px;
+	z-index: 2;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.heartView h2 {
+	cursor: pointer;
+	background: #fff;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 12px;
+	position: relative;
+}
+
+.heartView .viewinfo:hover {
+	color: green;
+}
+
+.heartView .heart:hover {
+	color: blueviolet;
+}
+
+.viewinfo::after,
+.heart::after,
+.active::after {
+	content: 'View all details';
+	position: absolute;
+	top: 0px;
+	left: -160px;
+	padding: 5px;
+	border-radius: 10px;
+	text-align: center;
+	width: 150px;
+	background: #fff;
+	z-index: 11;
+	transform: translateX(300%);
+	transition: all 0.5s;
+}
+
+.heart::after {
+	content: 'Add to favorite';
+}
+.active::after {
+	display: none;
+}
+.heart:hover::after {
+	transform: translateX(0%);
+}
+
+.viewinfo:hover::after {
+	transform: translateX(0%);
+}
+
+.active {
+	color: blueviolet;
+}
+
+.recipe_img,
+.recipe_img img {
+	width: 100%;
+	height: 220px;
+	border-radius: 8px 8px 0px 0px;
+	display: block;
+	position: relative;
+}
+
+.recipe_img::before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	border-radius: 8px 8px 0px 0px;
+	background: #00000031;
+}
+
+.single_recipe .single_r_footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px 0px;
+}
+
+.single_recipe .r_title {
+	max-width: 70%;
+	color: #111;
+}
+
+.single_r_footer .r_review {
+	color: rgb(186, 186, 0);
+	font-size: 0.6rem;
+}
+
+/* It's for toggle header search box & allRecipes Text */
+.unShow {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: display 0.1s, transform 0.7s;
+}
+
+#refresh_button {
+	cursor: pointer;
+}
+
+.spinning {
+	animation-name: spin;
+	animation-iteration-count: 1;
+	animation-duration: 0.8s;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(180deg);
+	}
+}
+
+.popup,
+.loading {
+	width: 100%;
+	height: 100vh;
+	background-color: #00000088;
+	z-index: 111;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.popup-container {
+	width: 500px;
+	height: 100vh;
+	background: #333333;
+	color: #ddd;
+	margin: auto;
+	overflow-y: scroll;
+}
+
+.loading-container {
+	width: 350px;
+	height: fit-content;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+.popup-container header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	padding-left: 20px;
+	background: #555;
+	position: sticky;
+	top: 0px;
+	left: 0px;
+}
+
+.popup-container header #remove_popup {
+	cursor: pointer;
+}
+
+.popup-container .popup_info {
+	padding: 20px;
+}
+
+.popup_info img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.popup_info div {
+	margin: 10px 0px;
+}
+
+.popup_info div strong {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.popup_info ul li {
+	margin: 5px 0px;
+	margin-left: 30px;
+}
+
+.cursor {
+	cursor: pointer;
+}
