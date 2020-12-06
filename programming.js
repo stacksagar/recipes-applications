@@ -235,7 +235,8 @@ function seaLoaAct(getValue) {
 	}, 1100);
 }
 
-searchForm.addEventListener('submit', () => {
+searchForm.addEventListener('submit', (e) => {
+	e.preventDefault();
 	const getValue = searchInput.value;
 	if (getValue.length > 0) {
 		seaLoaAct(getValue);
