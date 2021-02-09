@@ -1,4 +1,5 @@
 ## <a href="#"> TicTacToe Made with (React.js) </a>
+> Recipes Application Using Pure JavaScript Fetch API, Search, Category, Local Storage Etc.
 ###### React Project `TicTacToe` [See Live Preview](https://stacksagar.github.io/recipes-applications "project of @stacksagar")
 
 ### Connect With Me 👇
